@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Display property</title>
+    <link href="box-model.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="box-model.js"></script>
+  </head>
+  <body>
+    <h1>Box model</h1>
+    <div id="container">
+      <div id="box">
+        This is the box
+      </div>
+    </div>
+    <div>
+      <h2>Box sizing</h2>
+      <select id="boxSizing">
+        <option value="content-box" selected="selected">Content box</option>
+        <option value="border-box">Border box</option>
+      </select>
+    </div>
+    <div>
+      <h2>Margin and padding</h2>
+      <label for="margin">Margin:</label>
+      <input type="number" id="margin" value="0" />
+      <label for="padding">Padding:</label>
+      <input type="number" id="padding" value="0" />
+    </div>
+    <div>
+      <h2>Border</h2>
+
+      <label for="borderWidth">Border width:</label>
+      <input type="number" id="borderWidth" value="1" />
+
+      <label for="borderStyle">Border style:</label>
+      <select id="borderStyle">
+        <option value="none">None</option>
+        <option value="solid" selected="selected">Solid</option>
+        <option value="hidden">Hidden</option>
+        <option value="dashed">Dashed</option>
+        <option value="dotted">Dotted</option>
+        <option value="double">Double</option>
+        <option value="groove">Groove</option>
+        <option value="inset">Inset</option>
+        <option value="outset">Outset</option>
+        <option value="ridge">Ridge</option>
+      </select>
+
+      <label for="borderColor">Border color:</label>
+      <input type="color" id="borderColor" value="black" />
+
+      <label for="borderRadius">Border radius:</label>
+      <input type="number" id="borderRadius" value="0" />
+    </div>
+    <div>
+      <h2>Background</h2>
+
+      <label for="backgroundColor">Color:</label>
+      <input type="color" id="backgroundColor" value="white" />
+
+      <label for="backgroundImage">Image URL:</label>
+      <input type="text" id="backgroundImage" value="" />
+
+      <label for="backgroundSizeWidth">Width:</label>
+      <input type="number" id="backgroundSizeWidth" value="0" />
+      <label for="backgroundSizeHeight">Heigth:</label>
+      <input type="number" id="backgroundSizeHeight" value="0" />
+
+      <label for="backgroundPositionX">X position:</label>
+      <input type="number" id="backgroundPositionX" value="0" />
+      <label for="backgroundPositionY">Y position:</label>
+      <input type="number" id="backgroundPositionY" value="0" />
+
+      <label for="backgroundOrigin">Origin:</label>
+      <select id="backgroundOrigin">
+        <option value="content-box" selected="selected">Content box</option>
+        <option value="border-box">Border box</option>
+        <option value="padding-box">Padding box</option>
+      </select>
+
+      <label for="backgroundRepeat">Repeat:</label>
+      <select id="backgroundRepeat">
+        <option value="no-repeat" selected="selected">No repeat</option>
+        <option value="repeat">Repeat</option>
+        <option value="repeat-x">Repeat X</option>
+        <option value="repeat-y">Repeat Y</option>
+      </select>
+
+      <label for="backgroundAttachment">Attachment:</label>
+      <select id="backgroundAttachment">
+        <option value="scroll" selected="selected">Scroll</option>
+        <option value="fixed">Fixed</option>
+      </select>
+    </div>
+  </body>
+</html>
