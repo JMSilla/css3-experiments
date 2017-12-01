@@ -11,7 +11,13 @@
     <h1>Box model</h1>
     <div id="container">
       <div id="box">
-        This is the box
+        This is the box. This is the box.
+        This is the box. This is the box.
+        This is the box. This is the box.
+        This is the box. This is the box.
+        This is the box. This is the box.
+        This is the box. This is the box.
+        This is the box. This is the box.
       </div>
     </div>
     <div>
@@ -55,43 +61,134 @@
       <input type="number" id="borderRadius" value="0" />
     </div>
     <div>
+      <h2>Outline</h2>
+
+      <label for="outlineWidth">Outline width:</label>
+      <input type="number" id="outlineWidth" value="0" />
+
+      <label for="outlineStyle">Outline style:</label>
+      <select id="outlineStyle">
+        <option value="none" selected="selected">None</option>
+        <option value="solid">Solid</option>
+        <option value="hidden">Hidden</option>
+        <option value="dashed">Dashed</option>
+        <option value="dotted">Dotted</option>
+        <option value="double">Double</option>
+        <option value="groove">Groove</option>
+        <option value="inset">Inset</option>
+        <option value="outset">Outset</option>
+        <option value="ridge">Ridge</option>
+      </select>
+
+      <label for="outlineColor">Outline color:</label>
+      <input type="color" id="outlineColor" value="black" />
+
+      <label for="outlineOffset">Outline offset:</label>
+      <input type="number" id="outlineOffset" value="0" />
+    </div>
+    <div>
       <h2>Background</h2>
 
-      <label for="backgroundColor">Color:</label>
-      <input type="color" id="backgroundColor" value="white" />
+      <div>
+        <h3>Color</h3>
+        <label for="backgroundColor">Color:</label>
+        <input type="color" id="backgroundColor" value="white" />
 
-      <label for="backgroundImage">Image URL:</label>
-      <input type="text" id="backgroundImage" value="" />
+        <button id="applyBackgroundColor">Apply</button>
+      </div>
 
-      <label for="backgroundSizeWidth">Width:</label>
-      <input type="number" id="backgroundSizeWidth" value="0" />
-      <label for="backgroundSizeHeight">Heigth:</label>
-      <input type="number" id="backgroundSizeHeight" value="0" />
+      <div>
+        <h3>Image</h3>
 
-      <label for="backgroundPositionX">X position:</label>
-      <input type="number" id="backgroundPositionX" value="0" />
-      <label for="backgroundPositionY">Y position:</label>
-      <input type="number" id="backgroundPositionY" value="0" />
+        <label for="backgroundImage">Image URL:</label>
+        <input type="text" id="backgroundImage" value="" />
 
-      <label for="backgroundOrigin">Origin:</label>
-      <select id="backgroundOrigin">
-        <option value="content-box" selected="selected">Content box</option>
-        <option value="border-box">Border box</option>
-        <option value="padding-box">Padding box</option>
+        <label for="backgroundSizeWidth">Width:</label>
+        <input type="number" id="backgroundSizeWidth" value="0" />
+        <label for="backgroundSizeHeight">Heigth:</label>
+        <input type="number" id="backgroundSizeHeight" value="0" />
+
+        <label for="backgroundPositionX">X position:</label>
+        <input type="number" id="backgroundPositionX" value="0" />
+        <label for="backgroundPositionY">Y position:</label>
+        <input type="number" id="backgroundPositionY" value="0" />
+
+        <label for="backgroundOrigin">Origin:</label>
+        <select id="backgroundOrigin">
+          <option value="content-box" selected="selected">Content box</option>
+          <option value="border-box">Border box</option>
+          <option value="padding-box">Padding box</option>
+        </select>
+
+        <label for="backgroundRepeat">Repeat:</label>
+        <select id="backgroundRepeat">
+          <option value="no-repeat" selected="selected">No repeat</option>
+          <option value="repeat">Repeat</option>
+          <option value="repeat-x">Repeat X</option>
+          <option value="repeat-y">Repeat Y</option>
+        </select>
+
+        <label for="backgroundAttachment">Attachment:</label>
+        <select id="backgroundAttachment">
+          <option value="scroll" selected="selected">Scroll</option>
+          <option value="fixed">Fixed</option>
+        </select>
+
+        <button id="applyBackgroundImage">Apply</button>
+      </div>
+
+      <div>
+        <h3>Linear gradient</h3>
+
+        <label for="linearGradientAngle">Angle:</label>
+        <input type="range" id="linearGradientAngle" val="180" min="0" max="360" />
+        <label for="linearGradientStartColor">Start color:</label>
+        <input type="color" id="linearGradientStartColor" value="blue" />
+        <label for="linearGradientEndColor">End color:</label>
+        <input type="color" id="linearGradientEndColor" value="red" />
+
+        <button id="applyBackgroundLinearGradient">Apply</button>
+      </div>
+
+      <div>
+        <h3>Radial gradient</h3>
+
+        <label for="radialGradientShape">Shape:</label>
+        <select id="radialGradientShape">
+            <option value="ellipse" selected="selected">Ellipse</option>
+            <option value="circle">Circle</option>
+        </select>
+        <label for="radialGradientStartColor">Start color:</label>
+        <input type="color" id="radialGradientStartColor" value="blue" />
+        <label for="radialGradientEndColor">End color:</label>
+        <input type="color" id="radialGradientEndColor" value="red" />
+
+        <button id="applyBackgroundRadialGradient">Apply</button>
+      </div>
+    </div>
+    <div>
+      <h2>Other block properties</h2>
+
+      <label for="resize">Resize:</label>
+      <select id="resize">
+        <option value="none" selected="selected">None</option>
+        <option value="both">Both</option>
+        <option value="horizontal">Horizontal</option>
+        <option value="vertical">Vertical</option>
       </select>
 
-      <label for="backgroundRepeat">Repeat:</label>
-      <select id="backgroundRepeat">
-        <option value="no-repeat" selected="selected">No repeat</option>
-        <option value="repeat">Repeat</option>
-        <option value="repeat-x">Repeat X</option>
-        <option value="repeat-y">Repeat Y</option>
+      <label for="overflowX">Overflow X:</label>
+      <select id="overflowX">
+        <option value="visible" selected="selected">Visible</option>
+        <option value="hidden">Hidden</option>
+        <option value="scroll">Scroll</option>
       </select>
 
-      <label for="backgroundAttachment">Attachment:</label>
-      <select id="backgroundAttachment">
-        <option value="scroll" selected="selected">Scroll</option>
-        <option value="fixed">Fixed</option>
+      <label for="overflowY">Overflow Y:</label>
+      <select id="overflowY">
+        <option value="visible" selected="selected">Visible</option>
+        <option value="hidden">Hidden</option>
+        <option value="scroll">Scroll</option>
       </select>
     </div>
   </body>

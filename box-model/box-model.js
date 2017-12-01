@@ -30,12 +30,38 @@ $(
       box.css("border-radius", parseInt($(this).val()));
     });
 
-    $("#backgroundColor").change(function() {
-      box.css("background-color", $(this).val());
+    $("#outlineWidth").change(function() {
+      box.css("outline-width", parseInt($(this).val()));
     });
 
-    $("#backgroundImage").change(function() {
-      box.css("background-image", "url(" + $(this).val() + ")");
+    $("#outlineStyle").change(function() {
+      box.css("outline-style", $(this).val());
+    });
+
+    $("#outlineColor").change(function() {
+      box.css("outline-color", $(this).val());
+    });
+
+    $("#outlineOffset").change(function() {
+      box.css("outline-offset", parseInt($(this).val()));
+    });
+
+    $("#backgroundColor").change(function() {
+      box.css("background-color", $("#backgroundColor").val());
+    });
+
+    $("#applyBackgroundColor").click(function() {
+      box.css("background", "");
+      box.css("background-color", $("#backgroundColor").val());
+    });
+
+    $("#backgroundImage").click(function() {
+      box.css("background", "");
+      box.css("background-image", "url(" + $("#backgroundImage").val() + ")");
+    });
+
+    $("#applyBackgroundImage").click(function() {
+      box.css("background-image", "url(" + $("#backgroundImage").val() + ")");
     });
 
     $("#backgroundSizeWidth").change(function() {
@@ -68,6 +94,32 @@ $(
 
     $("#backgroundAttachment").change(function() {
       box.css("background-attachment", $(this).val());
+    });
+
+    $("#applyBackgroundLinearGradient").click(function() {
+      box.css("background", "linear-gradient("
+        + $("#linearGradientAngle").val() + "deg,"
+        + $("#linearGradientStartColor").val() + ","
+        + $("#linearGradientEndColor").val() + ")");
+    });
+
+    $("#applyBackgroundRadialGradient").click(function() {
+      box.css("background", "radial-gradient("
+        + $("#radialGradientShape").val() + ","
+        + $("#radialGradientStartColor").val() + ","
+        + $("#radialGradientEndColor").val() + ")");
+    });
+
+    $("#resize").change(function() {
+      box.css("resize", $(this).val());
+    });
+
+    $("#overflowX").change(function() {
+      box.css("overflow-x", $(this).val());
+    });
+
+    $("#overflowY").change(function() {
+      box.css("overflow-y", $(this).val());
     });
   }
 );
