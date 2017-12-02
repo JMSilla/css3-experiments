@@ -2,7 +2,6 @@
 CSS Experiments for learning purposes only
 
 ## Unfinished experiments
-- Flex layout
 - Grid layout
 - Fonts
 - Text
@@ -13,3 +12,4 @@ CSS Experiments for learning purposes only
 - Display
 - Position
 - Box model
+- Flex layout

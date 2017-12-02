@@ -1,0 +1,19 @@
+#flexbox {
+  border: 5px solid black;
+  display: flex;
+  height: 500px;
+}
+
+#flexbox div {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+
+#flexbox div:nth-child(even) {
+  background-color: #358EDA;
+}
+
+#flexbox div:nth-child(odd) {
+  background-color: #3FCE00;
+}
