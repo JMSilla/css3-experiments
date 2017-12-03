@@ -1,0 +1,49 @@
+#grid1, #grid2 {
+  display: grid;
+  border: 10px solid blue;
+  width: 400px;
+  height: 400px;
+  grid-gap: 10px 10px;
+}
+
+#grid1 {
+  grid-template-columns: [col1] 1fr [col2] 2fr;
+  grid-template-rows: [row1] 2fr [row2] 1fr;
+}
+
+#grid2 {
+  grid-template-areas: "row1 row2_1"
+    "row1 row2_2" "row3 row3";
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  justify-items: start;
+  align-items: stretch;
+  justify-content: space-between;
+  align-content: space-evenly;
+}
+
+#grid1 div {
+  border: 1px solid black;
+}
+
+#grid2 div {
+  border: 1px solid black;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+#grid2 #a2 {
+  grid-area: row1;
+}
+
+#grid2 #b2 {
+  grid-area: row2_1;
+}
+
+#grid2 #c2 {
+  grid-area: row2_2;
+}
+
+#grid2 #d2 {
+  grid-area: row3;
+}
